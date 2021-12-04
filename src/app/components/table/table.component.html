@@ -1,5 +1,5 @@
 
-<p-table [value]="pokemons"
+<p-table [value]="pokemons | searchFilter: query"
          styleClass="p-datatable-gridlines"
          [paginator]="true" [rows]="rows" [(first)]="first"
          responsiveLayout="scroll">

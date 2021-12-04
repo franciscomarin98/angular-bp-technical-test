@@ -11,25 +11,28 @@ import {PrimeNgModule} from "./modules/prime-ng/prime-ng.module";
 import { PokemonPageComponent } from './pages/pokemon-page/pokemon-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PokemonFormPageComponent } from './pages/pokemon-form-page/pokemon-form-page.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PokemonPageComponent,
-    PokemonFormPageComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ComponentsModule,
-    PrimeNgModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        PokemonPageComponent,
+        PokemonFormPageComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ComponentsModule,
+        PrimeNgModule,
+        HttpClientModule,
+        FormsModule
+    ],
+    providers: [],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

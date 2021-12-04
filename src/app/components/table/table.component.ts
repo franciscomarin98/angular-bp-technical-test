@@ -9,6 +9,7 @@ import {Pokemon} from "../../interfaces/pokemon";
 export class TableComponent implements OnInit {
 
   @Input() pokemons: Pokemon[] = [];
+  @Input() query: string = '';
   @Output() pokemonId = new EventEmitter<number>();
 
   deletePokemon(value: number) {

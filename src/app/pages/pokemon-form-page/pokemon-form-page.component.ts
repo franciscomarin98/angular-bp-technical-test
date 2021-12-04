@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pokemon-form-page',
@@ -9,9 +10,13 @@ export class PokemonFormPageComponent implements OnInit {
 
   val1: number  = 1;
   val2: number  = 1;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  back(): void {
+    this.router.navigate(['/pokemon'])
   }
 
 }
