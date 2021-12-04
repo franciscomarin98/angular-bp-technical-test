@@ -1,0 +1,23 @@
+<p-table [value]="pokemons" styleClass="p-datatable-gridlines" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th class="text-center text-indigo-900">Nombre</th>
+      <th class="text-center text-indigo-900">Imagen</th>
+      <th class="text-center text-indigo-900">Ataque</th>
+      <th class="text-center text-indigo-900">Defensa</th>
+      <th class="text-center text-indigo-900">Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{product.code}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.category}}</td>
+      <td>{{product.category}}</td>
+      <td>{{product.category}}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="summary">
+    En total hay 0 pokemones.
+  </ng-template>
+</p-table>
