@@ -1,20 +1,27 @@
 <div class="container">
   <p-toast></p-toast>
+
   <h1 class="text-xl text-indigo-800">Listado de Pokemon</h1>
 
   <div class="flex justify-content-between flex-wrap">
   <span class="p-input-icon-left">
     <i class="pi pi-search"></i>
-    <input type="text" pInputText [(ngModel)]="value1" placeholder="Buscar">
+    <input type="text"
+           pInputText [(ngModel)]="termino"
+           placeholder="Buscar">
   </span>
 
     <div class="container-button">
-      <p-button label="Nuevo" icon="pi pi-plus" iconPos="left"></p-button>
+      <p-button label="Nuevo"
+                icon="pi pi-plus"
+                iconPos="left"
+                (onClick)="navigateToPageCreatePokemon()">
+      </p-button>
     </div>
   </div>
 
   <div class="my-4">
-    <app-table [pokemons]="pokemons"(pokemonId)="deletePokemon($event)"></app-table>
+    <app-table [pokemons]="pokemons" (pokemonId)="deletePokemon($event)"></app-table>
   </div>
 
   <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>

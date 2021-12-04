@@ -16,7 +16,7 @@ export class TableComponent implements OnInit {
   }
 
   first: number = 0;
-  rows: number = 5;
+  rows: number = 3;
 
   constructor() {
   }

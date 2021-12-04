@@ -6,8 +6,9 @@ import {TableModule} from "primeng/table";
 import {ImageModule} from 'primeng/image';
 import {RippleModule} from "primeng/ripple";
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
-import { MessagesModule } from 'primeng/messages';
+import {MessagesModule} from 'primeng/messages';
 import {ToastModule} from "primeng/toast";
+import {SliderModule} from 'primeng/slider';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ToastModule} from "primeng/toast";
     RippleModule,
     ConfirmDialogModule,
     MessagesModule,
-    ToastModule
+    ToastModule,
+    SliderModule
   ],
   exports: [
     ButtonModule,
@@ -31,7 +33,8 @@ import {ToastModule} from "primeng/toast";
     RippleModule,
     ConfirmDialogModule,
     MessagesModule,
-    ToastModule
+    ToastModule,
+    SliderModule
   ],
 })
 export class PrimeNgModule {

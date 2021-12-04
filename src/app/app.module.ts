@@ -10,12 +10,14 @@ import {ComponentsModule} from "./components/components.module";
 import {PrimeNgModule} from "./modules/prime-ng/prime-ng.module";
 import { PokemonPageComponent } from './pages/pokemon-page/pokemon-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import { PokemonFormPageComponent } from './pages/pokemon-form-page/pokemon-form-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonPageComponent,
+    PokemonFormPageComponent,
   ],
   imports: [
     BrowserModule,

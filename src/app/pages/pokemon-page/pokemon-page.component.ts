@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Pokemon} from 'src/app/interfaces/pokemon';
 import {PokemonService} from 'src/app/services/pokemon.service';
-import {ConfirmationService, ConfirmEventType, MessageService} from 'primeng/api';
+import {ConfirmationService, MessageService} from 'primeng/api';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-pokemon-page',
@@ -11,13 +12,14 @@ import {ConfirmationService, ConfirmEventType, MessageService} from 'primeng/api
 })
 export class PokemonPageComponent implements OnInit {
 
-  value1: string = '';
+  termino: string = '';
   pokemons: Pokemon[] = []
 
   constructor(
     private pokemonService: PokemonService,
     private confirmationService: ConfirmationService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router,
   ) {
   }
 
@@ -55,6 +57,10 @@ export class PokemonPageComponent implements OnInit {
         })
       }
     });
+  }
+
+  navigateToPageCreatePokemon(): void {
+    this.router.navigateByUrl('/pokemon/crear');
   }
 
 

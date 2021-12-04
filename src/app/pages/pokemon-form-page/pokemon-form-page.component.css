@@ -1,0 +1,22 @@
+
+.form-content{
+/*  margin: 3rem;*/
+  padding: 6px 12px;
+  border: 1px solid #d9d7ce;
+  background:#fff;
+}
+
+.form-content>form{
+  margin: 0 8rem;
+}
+
+@media screen and (max-width: 767px) {
+
+  .form-content{
+    margin: 0;
+  }
+
+  .form-content>form{
+    margin: 0 1.6rem;
+  }
+}
