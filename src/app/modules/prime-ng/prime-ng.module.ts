@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from "primeng/table";
+import {ImageModule} from 'primeng/image';
+import {RippleModule} from "primeng/ripple";
 
 
 @NgModule({
@@ -11,12 +13,16 @@ import {TableModule} from "primeng/table";
     CommonModule,
     ButtonModule,
     InputTextModule,
-    TableModule
+    TableModule,
+    ImageModule,
+    RippleModule
   ],
   exports: [
     ButtonModule,
     InputTextModule,
-    TableModule
+    TableModule,
+    ImageModule,
+    RippleModule
   ],
 })
 export class PrimeNgModule {

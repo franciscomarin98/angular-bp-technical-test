@@ -1,4 +1,6 @@
-<p-table [value]="pokemons" styleClass="p-datatable-gridlines" responsiveLayout="scroll">
+<p-table [value]="pokemons"
+         styleClass="p-datatable-gridlines"
+         responsiveLayout="scroll">
   <ng-template pTemplate="header">
     <tr>
       <th class="text-center text-indigo-900">Nombre</th>
@@ -8,16 +10,26 @@
       <th class="text-center text-indigo-900">Acciones</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-product>
+  <ng-template pTemplate="body" let-pokemon>
     <tr>
-      <td>{{product.code}}</td>
-      <td>{{product.name}}</td>
-      <td>{{product.category}}</td>
-      <td>{{product.category}}</td>
-      <td>{{product.category}}</td>
+      <td>{{pokemon.name}}</td>
+      <td class="text-center">
+        <p-image
+          [src]="pokemon.image"
+          [alt]="pokemon.name"
+          [preview]="true"
+          width="60">
+        </p-image>
+      </td>
+      <td>{{pokemon.attack}}</td>
+      <td>{{pokemon.defense}}</td>
+      <td class="text-center">
+        <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-text"></button>
+        <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-text"></button>
+      </td>
     </tr>
   </ng-template>
   <ng-template pTemplate="summary">
-    En total hay 0 pokemones.
+    En total hay {{pokemons.length}} pokemones.
   </ng-template>
 </p-table>

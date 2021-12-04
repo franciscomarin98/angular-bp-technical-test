@@ -8,8 +8,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent {
   title = 'prueba-tecnica-angular-bp';
-  value1: string = '';
-  products = []
+
   constructor(private primengConfig: PrimeNGConfig) { }
 
   ngOnInit(): void {

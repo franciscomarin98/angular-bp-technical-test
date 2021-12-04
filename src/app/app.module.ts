@@ -8,11 +8,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {ComponentsModule} from "./components/components.module";
 import {PrimeNgModule} from "./modules/prime-ng/prime-ng.module";
+import { PokemonPageComponent } from './pages/pokemon-page/pokemon-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PokemonPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,6 +23,7 @@ import {PrimeNgModule} from "./modules/prime-ng/prime-ng.module";
     BrowserAnimationsModule,
     ComponentsModule,
     PrimeNgModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],

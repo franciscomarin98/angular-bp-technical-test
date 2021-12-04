@@ -1,0 +1,15 @@
+<h1 class="text-xl text-indigo-800">Listado de Pokemon</h1>
+
+
+<div class="flex justify-content-between width-100%">
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input type="text" pInputText [(ngModel)]="value1" placeholder="Buscar">
+  </span>
+
+  <p-button label="Nuevo" icon="pi pi-plus" iconPos="left"></p-button>
+</div>
+
+<div class="my-4">
+  <app-table [pokemons]="pokemons"></app-table>
+</div>
