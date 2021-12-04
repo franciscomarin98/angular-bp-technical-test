@@ -10,10 +10,26 @@ export class TableComponent implements OnInit {
 
   @Input() pokemons: Pokemon[] = [];
 
+  first: number = 0;
+  rows: number = 5;
+
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+
+  next = () => this.first = this.first + this.rows;
+  prev = () => this.first = this.first - this.rows;
+  reset = () => this.first = 0;
+
+  isLastPage(): boolean {
+    return this.pokemons ? this.first === (this.pokemons.length - this.rows) : true;
+  }
+
+  isFirstPage(): boolean {
+    return this.pokemons ? this.first === 0 : true;
   }
 
 }
