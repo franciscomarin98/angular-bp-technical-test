@@ -1,3 +1,4 @@
+
 <p-table [value]="pokemons"
          styleClass="p-datatable-gridlines"
          [paginator]="true" [rows]="rows" [(first)]="first"
@@ -26,7 +27,7 @@
       <td>{{pokemon.defense}}</td>
       <td class="text-center">
         <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-text"></button>
-        <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-text"></button>
+        <button pButton pRipple type="button" icon="pi pi-trash" (click)="deletePokemon(pokemon.id)" class="p-button-rounded p-button-text"></button>
       </td>
     </tr>
   </ng-template>

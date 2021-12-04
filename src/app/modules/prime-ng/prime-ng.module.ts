@@ -5,6 +5,9 @@ import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from "primeng/table";
 import {ImageModule} from 'primeng/image';
 import {RippleModule} from "primeng/ripple";
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { MessagesModule } from 'primeng/messages';
+import {ToastModule} from "primeng/toast";
 
 
 @NgModule({
@@ -15,14 +18,20 @@ import {RippleModule} from "primeng/ripple";
     InputTextModule,
     TableModule,
     ImageModule,
-    RippleModule
+    RippleModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    ToastModule
   ],
   exports: [
     ButtonModule,
     InputTextModule,
     TableModule,
     ImageModule,
-    RippleModule
+    RippleModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    ToastModule
   ],
 })
 export class PrimeNgModule {

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Pokemon} from "../../interfaces/pokemon";
 
 @Component({
@@ -9,6 +9,11 @@ import {Pokemon} from "../../interfaces/pokemon";
 export class TableComponent implements OnInit {
 
   @Input() pokemons: Pokemon[] = [];
+  @Output() pokemonId = new EventEmitter<number>();
+
+  deletePokemon(value: number) {
+    this.pokemonId.emit(value);
+  }
 
   first: number = 0;
   rows: number = 5;

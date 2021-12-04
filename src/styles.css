@@ -1,15 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
-html, body{
+html, body {
   padding: .5em;
   background-color: var(--surface-b);
   font-family: var(--font-family);
 }
 
-.p-datatable.p-datatable-gridlines .p-paginator-bottom{
+.p-datatable.p-datatable-gridlines .p-paginator-bottom {
   display: none;
 }
 
-.p-datatable-footer{
+.p-datatable-footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 767px) {
+  .p-input-icon-left {
+    width: 100%;
+  }
+
+  .p-input-icon-left > input {
+    width: 100% !important;
+  }
+
+  .p-datatable-footer {
+    justify-content: center;
+  }
+
+  .container-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+  }
 }

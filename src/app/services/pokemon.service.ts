@@ -17,4 +17,8 @@ export class PokemonService {
   loadPokemonData(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(`${this.baseUrl}/pokemons/?idAuthor=1`);
   }
+
+  deletePokemon(id: number){
+    return this.http.delete(`${this.baseUrl}/pokemons/${id}`);
+  }
 }
