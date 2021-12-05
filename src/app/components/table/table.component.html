@@ -26,17 +26,54 @@
       <td>{{pokemon.attack}}</td>
       <td>{{pokemon.defense}}</td>
       <td class="text-center">
-        <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-text"></button>
-        <button pButton pRipple type="button" icon="pi pi-trash" (click)="deletePokemon(pokemon.id)" class="p-button-rounded p-button-text"></button>
+
+        <button
+          pButton
+          pRipple
+          type="button"
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-text">
+        </button>
+
+        <button
+          pButton
+          pRipple
+          type="button"
+          icon="pi pi-trash"
+          (click)="deletePokemon(pokemon.id)"
+          class="p-button-rounded p-button-text">
+        </button>
+
       </td>
     </tr>
   </ng-template>
   <ng-template pTemplate="summary">
     <p>En total hay {{pokemons.length}} pokemones.</p>
     <div class="p-mb-3">
-      <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
-      <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
-      <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage() || (this.pokemons.length - this.rows < 0)" styleClass="p-button-text"></p-button>
+
+      <p-button
+        type="button"
+        icon="pi pi-chevron-left"
+        (click)="prev()"
+        [disabled]="isFirstPage()"
+        styleClass="p-button-text">
+      </p-button>
+
+      <p-button
+        type="button"
+        icon="pi pi-refresh"
+        (click)="reset()"
+        styleClass="p-button-text">
+      </p-button>
+
+      <p-button
+        type="button"
+        icon="pi pi-chevron-right"
+        (click)="next()"
+        [disabled]="isLastPage() || (this.pokemons.length - this.rows < 0)"
+        styleClass="p-button-text">
+      </p-button>
+
     </div>
   </ng-template>
 </p-table>

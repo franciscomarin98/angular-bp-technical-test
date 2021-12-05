@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Pokemon} from 'src/app/interfaces/pokemon';
 import {PokemonService} from 'src/app/services/pokemon.service';
 import {ConfirmationService, MessageService} from 'primeng/api';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-pokemon-page',
@@ -20,7 +20,13 @@ export class PokemonPageComponent implements OnInit {
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
     private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation()?.extras.state) {
+        console.log(this.router.getCurrentNavigation()?.extras.state)
+      }
+    })
   }
 
   ngOnInit(): void {

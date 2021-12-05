@@ -18,7 +18,11 @@ export class PokemonService {
     return this.http.get<Pokemon[]>(`${this.baseUrl}/pokemons/?idAuthor=1`);
   }
 
-  deletePokemon(id: number){
+  storePokemon(data:any) {
+    return this.http.post(`${this.baseUrl}/pokemons/?idAuthor=1`, data);
+  }
+
+  deletePokemon(id: number) {
     return this.http.delete(`${this.baseUrl}/pokemons/${id}`);
   }
 }
