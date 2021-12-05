@@ -7,7 +7,6 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-pokemon-page',
   templateUrl: './pokemon-page.component.html',
-  styleUrls: ['./pokemon-page.component.css'],
   providers: [ConfirmationService, MessageService]
 })
 export class PokemonPageComponent implements OnInit {
@@ -41,7 +40,7 @@ export class PokemonPageComponent implements OnInit {
       acceptLabel: 'Si',
       rejectLabel: 'No',
       accept: () => {
-        this.pokemonService.deletePokemon(idPokemon).subscribe((response: any) => {
+        this.pokemonService.deletePokemon(idPokemon).subscribe(() => {
           this.messageService.add({
             severity: 'success',
             summary: 'Acción exitosa',
