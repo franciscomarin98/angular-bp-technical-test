@@ -1,9 +1,10 @@
 <div class="form-container animate__animated animate__fadeIn lg:mt-8">
+  <p-toast></p-toast>
   <div class="form-content text-center">
     <div class="text-center">
-      <h2 class="text-indigo-900 capitalize">Nuevo pokemon</h2>
+      <h2 class="text-indigo-900 capitalize">  {{ (idPokemon)? 'Editar Pokemon' : 'Nuevo Pokemon'}}</h2>
     </div>
-    <form [formGroup]="formPokemon" (ngSubmit)="storePokemon()">
+    <form [formGroup]="formPokemon" (ngSubmit)="storeOrUpdate()">
       <div class="form grid">
         <div class="field col-12 md:col-6 lg:col-6">
           <div class="field-form my-4">
@@ -69,7 +70,7 @@
       </div>
       <div class="text-center mb-4 botones">
         <p-button
-          label="Guardar"
+          [label]="(idPokemon) ? 'Actualizar' : 'Guardar'"
           class="p-button-lg mx-2"
           icon="pi pi-save"
           [disabled]="formPokemon.invalid"

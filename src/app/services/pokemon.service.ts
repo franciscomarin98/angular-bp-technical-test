@@ -18,8 +18,16 @@ export class PokemonService {
     return this.http.get<Pokemon[]>(`${this.baseUrl}/pokemons/?idAuthor=1`);
   }
 
-  storePokemon(data:any) {
+  getPokemon(idPokemon: number): Observable<Pokemon> {
+    return this.http.get<Pokemon>(`${this.baseUrl}/pokemons/${idPokemon}`);
+  }
+
+  storePokemon(data: Pokemon) {
     return this.http.post(`${this.baseUrl}/pokemons/?idAuthor=1`, data);
+  }
+
+  updatePokemon(idPokemon: number, data: Pokemon): Observable<Pokemon> {
+    return this.http.put<Pokemon>(`${this.baseUrl}/pokemons/${idPokemon}`, data);
   }
 
   deletePokemon(id: number) {

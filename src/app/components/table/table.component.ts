@@ -6,25 +6,15 @@ import {Pokemon} from "../../interfaces/pokemon";
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
+export class TableComponent {
 
   @Input() pokemons: Pokemon[] = [];
   @Input() query: string = '';
-  @Output() pokemonId = new EventEmitter<number>();
-
-  deletePokemon(value: number) {
-    this.pokemonId.emit(value);
-  }
+  @Output() delete = new EventEmitter<number>();
+  @Output() edit = new EventEmitter<number>();
 
   first: number = 0;
   rows: number = 3;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
 
   next = () => this.first = this.first + this.rows;
   prev = () => this.first = this.first - this.rows;
@@ -37,5 +27,14 @@ export class TableComponent implements OnInit {
   isFirstPage(): boolean {
     return this.pokemons ? this.first === 0 : true;
   }
+
+  deletePokemon(pokemonId: number) {
+    this.delete.emit(pokemonId);
+  }
+
+  editPokemon(pokemonId: number) {
+    this.edit.emit(pokemonId);
+  }
+
 
 }

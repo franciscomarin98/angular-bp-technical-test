@@ -1,5 +1,5 @@
 <div class="container  animate__animated animate__fadeIn">
-  <p-toast></p-toast>
+  <p-toast position="top-center"></p-toast>
 
   <h1 class="text-xl text-indigo-800">Listado de Pokemon</h1>
 
@@ -27,7 +27,8 @@
   <div class="my-4">
     <app-table
       [pokemons]="pokemons"
-      (pokemonId)="deletePokemon($event)"
+      (delete)="deletePokemon($event)"
+      (edit)="editPokemon($event)"
       [query]="termino">
     </app-table>
   </div>

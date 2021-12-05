@@ -13,6 +13,10 @@ const routes: Routes = [
     component: PokemonFormPageComponent
   },
   {
+    path: 'pokemon/actualizar/:id',
+    component: PokemonFormPageComponent
+  },
+  {
     path: '**',
     redirectTo: 'pokemon'
   }
